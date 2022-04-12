@@ -43,7 +43,7 @@ void referenceManual()
     char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
     for(int colorPairCount = 1; colorPairCount < MAX_COLORPAIR_NAME_CHARS; colorPairCount++)
     {
-         ColorPair colorPair = GetColorFromPairNumber(colorPairCounts);
+         ColorPair colorPair = GetColorFromPairNumber(colorPairCount);
          ColorPairToString(&colorPair, colorPairNames);
     }
 }
