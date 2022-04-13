@@ -39,10 +39,10 @@ void testPairToNumber(enum MajorColor major,enum MinorColor minor,int expectedPa
 }
 void referenceManual()
 {
-    for(int colorPairCount = 1; colorPairCount < 26; colorPairCount++)
+    int maxColor = 26;
+    for(int colorPairCount = 1; colorPairCount < maxColor; colorPairCount++)
     {
          ColorPair colorPair = GetColorFromPairNumber(colorPairCount);
-         ColorPairToString(&colorPair, colorPairNames);
          printf("majorColor-%s,minorColor-%s,%d-pairNumber", MajorColorNames[colorPair.majorColor],MajorColorNames[colorPair.minorColor],pairNumber); 
     }
 }
