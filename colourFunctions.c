@@ -19,7 +19,6 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
         (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
     return colorPair;
 }
-
 void testNumberToPair(int pairNumber,enum MajorColor expectedMajor,enum MinorColor expectedMinor)
 {
     ColorPair colorPair = GetColorFromPairNumber(pairNumber);
@@ -40,10 +39,10 @@ void testPairToNumber(enum MajorColor major,enum MinorColor minor,int expectedPa
 }
 void referenceManual()
 {
-    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-    for(int colorPairCount = 1; colorPairCount < MAX_COLORPAIR_NAME_CHARS; colorPairCount++)
+    for(int colorPairCount = 1; colorPairCount < 26; colorPairCount++)
     {
          ColorPair colorPair = GetColorFromPairNumber(colorPairCount);
          ColorPairToString(&colorPair, colorPairNames);
+         printf("majorColor-%s,minorColor-%s,%d-pairNumber", MajorColorNames[colorPair.majorColor],MajorColorNames[colorPair.minorColor],pairNumber); 
     }
 }
