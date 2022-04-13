@@ -43,6 +43,6 @@ void referenceManual()
     for(int colorPairCount = 1; colorPairCount < maxColor; colorPairCount++)
     {
          ColorPair colorPair = GetColorFromPairNumber(colorPairCount);
-         printf("majorColor-%s,minorColor-%s,%d-colorPairCount ", MajorColorNames[colorPair.majorColor],MajorColorNames[colorPair.minorColor],colorPairCount); 
+         printf("%d-Pair Number, majorColor-%s,minorColor-%s\n ", colorPairCount,MajorColorNames[colorPair.majorColor],MajorColorNames[colorPair.minorColor]); 
     }
 }
